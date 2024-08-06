@@ -1,8 +1,9 @@
 import json
 import os
 
+
 def load_json(filepath):
-    full_path = os.path.join('test', 'fixtures', filepath)
+    full_path = os.path.join('tests', 'fixtures', filepath)
     with open(full_path, 'r') as file:
         return json.load(file)
 
