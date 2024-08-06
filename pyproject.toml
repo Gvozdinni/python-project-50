@@ -6,14 +6,17 @@ authors = ["Your Name <you@example.com>"]
 readme = "README.md"
 packages = [
   { include = "gendiff"},
+  {include = "scripts"}
   ]
 
 [tool.poetry.scripts]
-gendiff = 'gendiff.gendiff:main'
+gendiff = "gendiff.cli:main"
 
 [tool.poetry.dependencies]
 python = "^3.12"
 
+[tool.poetry.dev-dependencies]
+pytest = "^8.3.2"
 
 [build-system]
 requires = ["poetry-core"]
